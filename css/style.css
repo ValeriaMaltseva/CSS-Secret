@@ -224,3 +224,187 @@ body {
 /*=================================================================
                                 FIGURE
 ===================================================================*/
+
+.block__20 {
+    width: 200px;
+    height: 100px;
+    background: #ffb783;
+    border-radius: 50%;
+    line-height: 100px;
+    text-align: center;
+}
+
+.block__21 {
+    width: 200px;
+    height: 100px;
+    background: #ffb783;
+    border-radius: 0 100% 100% 0 / 50%;
+    line-height: 100px;
+    text-align: center;
+}
+
+.block__22 {
+    width: 200px;
+    height: 100px;
+    background: #ffb783;
+    border-radius: 0 100% 0 0;
+    line-height: 100px;
+    text-align: center;
+}
+
+.block__23 {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.block__23::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: #ffb783;
+    transform: skew(45deg);
+}
+
+.block__24 {
+    width: 200px;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    transition: 1s clip-path;
+}
+
+.block__24:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/*
+    2 способ block__24
+    .picture {
+         transform: rotate(45deg);
+    }
+    .picture > img {
+        max-width: 100%;
+        transform: rotate(-45deg) scale(1.42);
+    }
+*/
+
+.block__25 {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: #ffb783;
+    background: linear-gradient(-45deg, transparent 15px, #ffb783 0);
+}
+
+.block__26 {
+    width: 150px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: #ffb783;
+    background: linear-gradient(-45deg, transparent 15px, #ffb783 0) right, linear-gradient(45deg, transparent 15px, #ffb783 0) left;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+.block__27 {
+    width: 150px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: #ffb783;
+    background: linear-gradient(135deg, transparent 15px, #ffb783 0) top left,
+    linear-gradient(-135deg, transparent 15px, #ffb783 0) top right,
+    linear-gradient(-45deg, transparent 15px, #ffb783 0) bottom right,
+    linear-gradient(45deg, transparent 15px, #ffb783 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.block__28 {
+    width: 150px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: #ffb783;
+    background: radial-gradient(circle at top left, transparent 15px, #ffb783 0) top left,
+    radial-gradient(circle at top right, transparent 15px, #ffb783 0) top right,
+    radial-gradient(circle at bottom right, transparent 15px, #ffb783 0) bottom right,
+    radial-gradient(circle at bottom left, transparent 15px, #ffb783 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.block__29 {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    line-height: 150px;
+    text-align: center;
+}
+
+.block__29::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #ffb783;
+    transform: perspective(.5em) rotateX(5deg);
+    transform-origin: bottom; /*попробуй bottom right или bottom left*/
+    z-index: -1;
+}
+
+/*=================================================================
+                                VISUAL EFFECTS
+===================================================================*/
+
+.block-effect {
+    width: 100px;
+    height: 100px;
+    background: #52c3ff;
+}
+
+.block__30 {
+    box-shadow: 0 5px 4px -4px black;
+}
+
+.block__31 {
+    box-shadow: 3px 3px 6px -3px black;
+}
+
+.block__32 {
+    box-shadow: 5px 0 5px -5px black,
+                -5px 0 5px -5px black;
+}
+
+.block__33 {
+    background: linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,.4) 0) no-repeat 100% 0/2em 2em,
+                linear-gradient(-135deg, transparent 1.5em, #52c3ff 0);
+}
+
+.block__34 {
+    position: relative;
+    background: linear-gradient(-150deg, transparent 1.5em, #52c3ff 0);
+}
+
+.block__34::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,.2) 0, rgba(0,0,0,.4)) 100% 0 no-repeat;
+    width: 1.73em;
+    height: 3em;
+    transform: translateY(-1.3em) rotate(-30deg);
+    transform-origin: bottom right;
+    border-bottom-left-radius: inherit;
+    box-shadow: -.2em .2em .3em -.1em rgba(0,0,0,.15);
+}
