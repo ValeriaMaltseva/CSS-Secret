@@ -197,3 +197,30 @@ body {
                         linear-gradient(90deg, #655 41px,transparent 0);
     background-size: 41px 100%, 61px 100%, 83px 100%;
 }
+
+.block__18 {
+    width: 150px;
+    height: 150px;
+    padding: 1em;
+    border: 1em solid transparent;
+    background: linear-gradient(white,white) padding-box,url('../img/stone-art.jpg') border-box 0 / cover;
+}
+
+@keyframes ants {
+    to {
+        background-position: 100%;
+    }
+}
+.block__19 {
+    width: 150px;
+    height: 150px;
+    padding: 1em;
+    border: 1px solid transparent;
+    background: linear-gradient(white,white) padding-box,
+                repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%) 0 / .6em .6em;
+    animation: ants 12s linear infinite;
+}
+
+/*=================================================================
+                                FIGURE
+===================================================================*/
