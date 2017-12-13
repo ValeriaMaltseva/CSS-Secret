@@ -408,3 +408,32 @@ body {
     border-bottom-left-radius: inherit;
     box-shadow: -.2em .2em .3em -.1em rgba(0,0,0,.15);
 }
+
+/*=================================================================
+                                WORK WITH TEXT
+===================================================================*/
+
+.block__35 {
+    font-size: 15px;
+    hyphens: auto;
+}
+
+.block__36 dd {
+    margin: 0;
+    font-weight: bold;
+}
+
+.block__36 dd,
+.block__36 dt {
+    display: inline;
+}
+
+dd + dt::before {
+    content: '\A';
+    white-space: pre;
+}
+
+dd + dd::before {
+    content: ', ';
+    font-weight: normal;
+}
